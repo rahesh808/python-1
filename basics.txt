@@ -1,0 +1,80 @@
+1)Concatenate two lists in the following order 
+input:  list1=["Hello","Hi"]
+        list2=["Divya","Sam"]
+
+output:['HelloDivya', 'Hellosam', 'HiDivya', 'Hisam']
+
+program:::
+list1=["Hello","Hi"]
+list2=["Divya","sam"]
+list3=[]
+for i in range(0,2):
+    for j in range(0,2):
+        list3.append(list1[i]+list2[j])
+list3
+----------------------------------------------------------------------------------
+2)Turn this every item of a list into its square
+
+input=[1,2,3,4,5,6,7]
+output=[1,4,9,16,25,36,49]
+
+program::::
+i=[1,2,3,4,5,6,7]
+input=[]
+z=len(i)
+for j in range(0,z):
+    input.append(i[j]*i[j])
+input
+
+-----------------------------------------------------------------------------------
+3)1. Write a program which accepts a sequence of comma-separated numbers from console and generate a list    and a tuple which contains every number.
+	
+	input  : 34,67,55,33,12,98
+	output : ['34', '67', '55', '33', '12', '98']
+		 ('34', '67', '55', '33', '12', '98')
+
+program::::
+a=input()
+y=a.split(",")
+z=list(y)
+z1=tuple(y)
+print(z)
+print(z1)
+
+-------------------------------------------------------------------------------------------------------
+4)2. With a given tuple (1,2,3,4,5,6,7,8,9,10), write a program to print the first half values in one line    and the last half values in one line.
+
+	input  : ('a','b','c','d','e',6,7,8,9,10)
+	output : ('a','b','c','d','e')
+		 (6,7,8,9,10)
+
+program::::
+tp=('a','b','c','d','e',6,7,8,9,10)
+y=list(tp)
+tp1=[]
+tp2=[]
+z=len(y)
+for i in range(0,z):
+    if i<z/2:
+        tp1.append(y[i])
+    else:
+        tp2.append(y[i])
+        
+a=tuple(tp1)
+b=tuple(tp2)
+print(a)
+print(b)
+------------------------------------------------------------------------------------------------------
+5)3. Write a program to generate and print another tuple whose values are even numbers in the given tuple 
+	input  : (1,2,3,4,5,6,7,8,9,10)
+	output : (2, 4, 6, 8, 10)
+
+program:::
+tp=(1,2,3,4,5,6,7,8,9,10)
+y=list(tp)
+tps=[]
+for i in range(0,10,1):
+    if i%2 != 0:
+        tps.append(y[i])
+        
+tuple(tps)    
